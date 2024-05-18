@@ -1,0 +1,342 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(closest-corner circle at 15% 15%, #ccc, #ccc 16%, #445 20%, rgb(20, 20, 36) 100%);
+    overflow: hidden;
+}
+
+body:hover {
+    background: radial-gradient(closest-corner circle at 15% 15%, #fbff00, #ffff00 16%, rgb(255, 255, 255) 20%, rgba(0, 0, 255, 0.658) 100%);
+}
+
+.boat_bg-container {
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: transparent;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    transform: scale(0.8)
+}
+
+.boat-body-con {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-self: last baseline;
+    flex-direction: row;
+    animation-name: rock;
+    animation-duration: 14s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rock {
+    25% {
+        transform: rotate(1.1deg);
+    }
+
+    75% {
+        transform: rotate(-1.1deg);
+    }
+}
+
+.body:nth-child(1),
+.body:nth-child(9) {
+    z-index: 1;
+    width: 25%;
+    height: 32rem;
+    border: 1px solid black;
+    background-color: goldenrod;
+}
+
+.body:nth-child(1) {
+    border-right: none;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 80%;
+    display: inline-flex;
+    justify-content: right;
+}
+
+.body:nth-child(9) {
+    border-left: none;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 80%;
+    display: inline-flex;
+
+}
+
+.inn-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 1rem solid black;
+    background-color: blue;
+    overflow: hidden;
+
+    animation-name: speed;
+    animation-duration: 14ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes speed {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spoke {
+    width: 7%;
+    height: 40%;
+    background-color: #fff;
+}
+
+.spoke:nth-child(1) {
+    top: 6%;
+    left: 30%;
+    transform: rotate(-36deg);
+}
+
+.spoke:nth-child(2) {
+    top: 2%;
+    left: 56%;
+    transform: rotate(12deg);
+}
+
+.spoke:nth-child(3) {
+    top: 22%;
+    left: 74%;
+    transform: rotate(70deg);
+}
+
+.spoke:nth-child(4) {
+    top: 47%;
+    left: 70%;
+    transform: rotate(120deg);
+}
+
+.spoke:nth-child(5) {
+    top: 60%;
+    left: 48%;
+    transform: rotate(-10deg);
+}
+
+.spoke:nth-child(6) {
+    top: 50%;
+    left: 22%;
+    transform: rotate(45deg);
+}
+
+.spoke:nth-child(7) {
+    top: 26%;
+    left: 20%;
+    transform: rotate(98deg);
+}
+
+.borris {
+    top: 40%;
+    left: 38%;
+    width: 26%;
+    height: 26%;
+    border-radius: inherit;
+    border: 4px solid #fff;
+    background-color: #000;
+}
+
+.middle {
+    width: 8%;
+    background-color: gold;
+    border-bottom: 1px solid black;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    align-self: last baseline;
+    z-index: 1;
+    animation-name: m-bord;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes m-bord {
+    100% {
+        border-top: 8px dotted #ff009d;
+    }
+}
+
+.pole {
+    width: 4%;
+    height: 26rem;
+    top: -18%;
+    left: 48%;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    background: repeating-linear-gradient(to right, brown 10%, burlywood 20%, gold 30%);
+}
+
+.stab {
+    background: linear-gradient(to bottom, goldenrod 4%, white 50%, red 46%);
+    animation-name: backstab;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes backstab {
+    100% {
+        background: linear-gradient(to bottom, transparent 10%, orange 80%, goldenrod 10%);
+    }
+}
+
+.one {
+    top: -33%;
+    left: 36%;
+    width: .3%;
+    height: 99%;
+    transform: rotate(55deg);
+}
+
+.two {
+    top: -33%;
+    left: 64%;
+    width: .3%;
+    height: 99%;
+    transform: rotate(-55deg);
+}
+
+.l-lock {
+    width: 60%;
+    height: 40px;
+    padding: 0 7rem;
+    border: 1px dotted blue;
+    right: 0;
+    left: 21%;
+    top: 16rem;
+    z-index: 1;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+
+    display: inline-flex;
+    justify-content: space-between;
+    animation-name: backcol;
+    animation-duration: 14s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.loc {
+    height: 100%;
+    width: 8%;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+@keyframes backcol {
+    40% {
+        background: linear-gradient(to top, goldenrod 40%, rgb(250, 125, 146) 30%, lightblue 30%);
+    }
+
+    20% {
+        background: repeating-radial-gradient(cyan, lightblue);
+    }
+
+    20% {
+        background: #fff;
+    }
+
+    20% {
+        box-shadow: -1px -1px 20px 10px lightblue;
+    }
+}
+
+
+img {
+    width: 100%;
+    height: 9rem;
+
+}
+
+.water,
+.water-op {
+    border-radius: 24px;
+
+}
+
+.water-op:nth-child(1) {
+    height: 10rem;
+    top: 88%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-name: wave-one;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    filter: grayscale(70%);
+}
+
+.water-op:nth-child(2) {
+    height: 8rem;
+    top: 90%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-name: wave;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.water-op:nth-child(3) {
+    height: 7.5rem;
+    top: 92%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-name: wave-one;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+    50% {
+        transform: translateX(20%);
+    }
+
+    50% {
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes wave-one {
+    50% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(10%);
+    }
+}
